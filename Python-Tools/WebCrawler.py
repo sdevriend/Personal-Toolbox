@@ -6,6 +6,8 @@ This tool crawls a website for specific elements.
 In this example the script was used for searching on isfinder.fr for
 data on Insertion Sequences.
 
+The tool uses a base url to crawl a website.
+
 Sebastiaan de Vriend	15-06-2016	Creation script
 """
 
@@ -13,13 +15,12 @@ import urllib
 
 from bs4 import BeautifulSoup
 
-FILELOC = "/media/sf_D_DRIVE/TOPLAB/blastRes15-8/inputfiles/allRes_fam.txt"
-RESULTFILE = "/media/sf_D_DRIVE/TOPLAB/blastRes15-8/ALLFAMLENGTHS.txt"
-url = "https://www-is.biotoul.fr/scripts/ficheIS.php?name="
+FILELOC = "FILENAMEHERE"
+RESULTFILE = "RESULTFILENAMEHERE"
+url = "URL PART HERE"
 
 
 def main():
-    #elementList = ["TnAs1"] # temp here
     with open(FILELOC) as f:
     	elementList = [line.rstrip() for line in f]
     
